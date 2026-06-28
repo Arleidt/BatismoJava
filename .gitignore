@@ -1,29 +1,23 @@
 ### IntelliJ IDEA ###
+.idea/
+*.iml
 out/
-!**/src/main/**/out/
-!**/src/test/**/out/
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+### Java ###
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+*.log
+hs_err_pid*
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+### Maven ###
+target/
 
-### VS Code ###
-.vscode/
+### Gradle ###
+.gradle/
+build/
 
-### Mac OS ###
+### Mac ###
 .DS_Store
