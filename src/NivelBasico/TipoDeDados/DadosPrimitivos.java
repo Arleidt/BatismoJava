@@ -18,6 +18,5 @@ public class DadosPrimitivos {
         System.out.println(saldoBancario);
         System.out.println("saldoBancario = " + saldoBancario);
 
-
     }
 }

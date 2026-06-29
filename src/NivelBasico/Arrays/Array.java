@@ -45,8 +45,5 @@ public class Array {
         String nomeNinja= "Naruto";
         nomeNinja = "Boruto";
         System.out.println(nomeNinja);
-
-
-
     }
 }
