@@ -16,13 +16,14 @@ public class Desafio {
         int ninjasCadastrados = 0;
         int opcao = 0;
 
-        while (opcao != 3) {
+        while (opcao != 4) {
 
             // MENU
             System.out.println("\n===== Menu Ninja =====");
             System.out.println("1. Cadastrar Ninja");
             System.out.println("2. Listar Ninjas");
-            System.out.println("3. Sair");
+            System.out.println("3. Deletar Ninja");
+            System.out.println("4. Sair");
             System.out.print("Escolha uma opção: ");
             opcao = scanner.nextInt();
             scanner.nextLine();
@@ -52,8 +53,43 @@ public class Desafio {
                         }
                     }
                     break;
-
                 case 3:
+                    if (ninjasCadastrados == 0) {
+                        System.out.println("Nenhum ninja cadastrado para deletar.");
+                    } else {
+                        // Mostra a lista numerada
+                        System.out.println("============ Lista de ninjas ============");
+                        for (int i = 0; i < ninjasCadastrados; i++) {
+                            System.out.println((i + 1) + ". " + ninjas[i]);
+                        }
+                        System.out.print("Digite o número do ninja que deseja deletar: ");
+                        int deletar = scanner.nextInt();
+                        scanner.nextLine();
+
+                        // Valida se o número é válido
+                        if (deletar >= 1 && deletar <= ninjasCadastrados) {
+                            int posicao = deletar - 1; // converte pra índice do array
+
+                            // Desloca os elementos pra esquerda
+                            for (int i = posicao; i < ninjasCadastrados - 1; i++) {
+                                ninjas[i] = ninjas[i + 1];
+                            }
+
+                            // Limpa a última posição e diminui o contador
+                            ninjas[ninjasCadastrados - 1] = null;
+                            ninjasCadastrados--;// Desloca os elementos pra esquerda
+                            for (int i = posicao; i < ninjasCadastrados - 1; i++) {
+                                ninjas[i] = ninjas[i + 1];
+                            }
+
+
+                            System.out.println("Ninja deletado com sucesso!");
+                        } else {
+                            System.out.println("Número inválido!");
+                        }
+                    }
+                    break;
+                case 4:
                     System.out.println("Estamos saindo o programa...Aguarde");
                     break;
 

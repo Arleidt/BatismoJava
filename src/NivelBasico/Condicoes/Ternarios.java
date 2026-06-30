@@ -8,8 +8,7 @@ public class Ternarios {
         boolean hokage = false;
         short numeroDeMissoes = 10;
 
-    String nivel = (numeroDeMissoes >= 10 && idade >15) ? "Rank: Chunnin"
-            : (numeroDeMissoes >=20
+    String nivel = (numeroDeMissoes >= 10 && idade >15) ? "Rank: Chunnin" : (numeroDeMissoes >=20
             ? "Rank: Jounin"
             : "Rank: Gennim");
     System.out.println(nivel);

@@ -14,7 +14,9 @@ public class LacosDeRepeticao {
             //numeroDeClones++;
             System.out.println("O Naruto fez um clone das sombras: " + numeroDeClones);
         }
-    //for
+    //for for ( INICIALIZAÇÃO ; CONDIÇÃO ; ATUALIZAÇÃO ) {
+        //    CORPO
+        //}
         for (int i = 0; i < numeroMaximoDeClones ; i++) {
             System.out.println("O Naruto fez um clone das sombras laço for: " + i);
         }
